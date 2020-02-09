@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Pomodoro Timer</title>
+    <meta name="description" content="Pomodoro Timer">
+    <meta name="author" content="John Lingenfelser">
+
+    <link rel="stylesheet" href="theme-1.css">
+
+</head>
+
+<body>
+    <script src="pomodoro.js"></script>
+
+    <div id="pomodoroMAIN" class="cta-section theme-bg-light py-5">
+        <div class="container text-center single-col-max-width">
+            <h1 class="heading">Pomodoro Timer</h1>
+            <p>A simple time management tool</p>
+        </div>
+
+        <div class="container text-center single-col-max-width">
+        </br></br>
+            <h1 class="heading">
+                <span id="timer">25:00</span>
+            </h1>
+        </div>
+    </div>
+</br>
+    <div class="container text-center single-col-max-width" id="timestate-buttons">
+        <a class="btn btn-primary" id="start">Start</a>
+        <a class="btn btn-primary" style="background-color: #EEA73B; border-color: #EEA73B;" id="pause">Pause</a>
+        <a class="btn btn-primary" style="background-color: #D67553; border-color: #D67553;" id="reset">Reset</a>
+
+    </div></br>
+    <div class="container text-center single-col-max-width" id="setter-buttons">
+        <a class="btn btn-primary" id="pomodoro">Pomodoro (25m)</a>
+        <a class="btn btn-primary" id="short_break">Short Break (5m)</a>
+        <a class="btn btn-primary" id="long_break">Long Break (15m)</a>
+    </div>
+    <div class="container text-center single-col-max-width" id="custom-time">
+        <p>Custom Time:</p>
+        <input id="custom" type="number" value="45" min="0" max="10000000" style="color: #4f4f4f; font-family:-apple-system,BlinkMacSystemFont;">
+        <select id="custom-units" style="color: #4f4f4f; font-family:-apple-system,BlinkMacSystemFont;">
+            <option value="seconds">Seconds</option>
+            <option value="minutes" selected="">Minutes</option>
+            <option value="hours">Hours</option>
+        </select>
+        <a class="btn btn-primary" id="set">Set</a>
+    </div>
+    <div class="container text-center double-col-max-width" id="help">
+        <div class="row">
+            <div class="col-sm" id="instructions">
+                <h4>How it works:</h4>
+                <li>Choose a task to focus on</li>
+                <li>Work for 25 uninterrupted minutes</li>
+                <li>Break for 5 minutes</li>
+                <li>Every four cycles, take a 15-30 minute</li></br>
+                <p>Read more on <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Wikipedia</a></p>
+            </div>
+            <div class="col-sm" id="options">
+                <h4>Options:</h4>
+                <select id="custom-sound" style="color: #4f4f4f; font-family:-apple-system,BlinkMacSystemFont;">
+                    <option value="Bell">Bell</option>
+                    <option value="Ring" selected="">Ring</option>
+                    <option value="Bong">Bong</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+<footer class="footer text-center py-4">
+    <small class="copyright"> &copy; 2014 - 2020 DC | John Lingenfelser - Software Developer. All code MIT license. All
+        rights reserved.</small>
+</footer>
+
+</html>
